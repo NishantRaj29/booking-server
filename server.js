@@ -5,12 +5,8 @@ const connectDB =require("./utils/db");
 const ticketRoutes = require('./routers/ticket-router');
 const cors = require('cors');
 
-const corsOption = {
-    origin:"https://booking-frontend-alpha.vercel.app/",
-    methods:"POST,DELETE,PATCH,GET,PUT,HEAD",
-    credentials:true,
-}
-app.use(cors(corsOption));
+
+app.use(cors());
 
 app.use(express.json());
 app.get('/', (req, res) => {
