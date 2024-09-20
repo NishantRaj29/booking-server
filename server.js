@@ -6,7 +6,7 @@ const ticketRoutes = require('./routers/ticket-router');
 const cors = require('cors');
 
 const corsOption = {
-    origin:"http://localhost:5173",
+    origin:"https://booking-frontend-alpha.vercel.app/",
     methods:"POST,DELETE,PATCH,GET,PUT,HEAD",
     credentials:true,
 }
