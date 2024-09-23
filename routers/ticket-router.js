@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 
 // Route to initialize seats (only call once to set up the DB)
-router.post('/initialize', ticketController.initializeSeats);
+// router.post('/initialize', ticketController.initializeSeats);
 
 // Route to show current seat availability
 router.get('/show', ticketController.showSeats);
@@ -13,8 +13,10 @@ router.get('/show', ticketController.showSeats);
 // Route to book seats
 router.post('/book', ticketController.bookSeats);
 
+// Route to update seats
 router.patch('/update', ticketController.updateSeats);
 
+// Route to reset seats db
 router.post('/reset', ticketController.resetSeats);
 
 module.exports = router;
