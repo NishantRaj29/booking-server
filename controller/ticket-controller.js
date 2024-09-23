@@ -1,19 +1,19 @@
 const Seat = require('../modals/ticket-modals');
 
 // Function to initialize seats
-exports.initializeSeats = async (req, res) => {
-    try {
-        const seats = new Seat({
-            A: "0000000", B: "0000000", C: "0000000", D: "0000000", E: "0000000", 
-            F: "0000000", G: "0000000", H: "0000000", I: "0000000", J: "0000000", 
-            K: "0000000", L: "0000000", M: "000"
-        });
-        await seats.save();
-        res.status(201).send('Seats initialized');
-    } catch (error) {
-        res.status(500).send(error);
-    }
-};
+// exports.initializeSeats = async (req, res) => {
+//     try {
+//         const seats = new Seat({
+//             A: "0000000", B: "0000000", C: "0000000", D: "0000000", E: "0000000", 
+//             F: "0000000", G: "0000000", H: "0000000", I: "0000000", J: "0000000", 
+//             K: "0000000", L: "0000000", M: "000"
+//         });
+//         await seats.save();
+//         res.status(201).send('Seats initialized');
+//     } catch (error) {
+//         res.status(500).send(error);
+//     }
+// };
 
 exports.updateSeats = async (req, res) => {
     try {
